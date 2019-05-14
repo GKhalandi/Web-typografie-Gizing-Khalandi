@@ -44,7 +44,7 @@ function updateTimerDisplay(){
 	// for each paragraph we want to know:
 	// (paragraph number, start time, end time, current time)
 
-	//Officer K D 6 - 3 . 7. Let’s begin. Ready?
+	// Officer K D 6 - 3 . 7. Let’s begin. Ready?
 	var i = 0;
 	while( i < captions.length) {
 		pTimes(i,captions[i][0],captions[i][1],t);
@@ -56,7 +56,7 @@ function updateTimerDisplay(){
 		i++;
 	}
 
-	if ( t < 136.1) {
+	if ( t < 246) {
 		setTimeout(() => {
 			updateTimerDisplay();
 		}, 100);
