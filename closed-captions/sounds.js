@@ -1,4 +1,4 @@
-// Hier kan je tijden toevoegen in secondes
+// Hier kan je tijden toevoegen in secondes, geluiden in closed captions
 // Op die mommenten komt er een class op de body.
 sounds = [
 	0,
@@ -12,4 +12,5 @@ sounds = [
 	32,
 	34,
 	86
+
 ];
