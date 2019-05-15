@@ -50,6 +50,7 @@ function updateTimerDisplay(){
 		pTimes(i,captions[i][0],captions[i][1],t);
 		i++;
 	}
+
 	var i = 0;
 	while( i < sounds.length) {
 		sTimes(i,sounds[i],t);
@@ -57,7 +58,7 @@ function updateTimerDisplay(){
 	}
 
 	if ( t < 246) {
-		setTimeout(() => {
+		setTimeout(() =>{
 			updateTimerDisplay();
 		}, 100);
 	}

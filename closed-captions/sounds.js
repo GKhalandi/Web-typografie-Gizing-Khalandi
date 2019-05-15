@@ -1,16 +1,19 @@
 // Hier kan je tijden toevoegen in secondes, geluiden in closed captions
 // Op die mommenten komt er een class op de body.
 sounds = [
-	0,
-	9,
-	12,
-	15,
-	16.5,
-	24,
-	25.8,
-	31,
-	32,
-	34,
-	86
+	128,
+	132,
+	151,
+	182,
+	190,
+	196,
+	200,
+	203,
+	206,
+	212,
+	219,
+	225,
+	229,
+	236
 
 ];
