@@ -12,6 +12,7 @@ iframe{
 }
 
 
+
 /* **********************************************
 Basic mechanics
 Hide all paragraphs by default
@@ -77,8 +78,8 @@ SOUNDS
 
 /* Schudden van de video */
 
-.sound2 iframe{
-	animation: shake 1s linear forwards 20;
+.sound2, .sound13 iframe{
+	animation: shake 1s linear forwards 35;
 	transform: translate3d(0, 0, 0);
 }
 
@@ -99,6 +100,55 @@ SOUNDS
     transform: translate3d(9px, 0, 0);
   }
 }
+
+.sound5 {
+	background: linear-gradient(88deg, #000000, #cf1cdc, #000000);
+	background-size: 600% 600%;
+	-webkit-animation: AnimationName 3s ease;
+	-moz-animation: AnimationName 3s ease;
+	animation: AnimationName 3s ease;
+}
+
+@-webkit-keyframes AnimationName {
+	 0%{background-position:0% 51%}
+	 50%{background-position:100% 50%}
+	 100%{background-position:0% 51%}
+}
+@-moz-keyframes AnimationName {
+	 0%{background-position:0% 51%}
+	 50%{background-position:100% 50%}
+	 100%{background-position:0% 51%}
+}
+@keyframes AnimationName {
+	 0%{background-position:0% 51%}
+	 50%{background-position:100% 50%}
+	 100%{background-position:0% 51%}
+}
+
+
+
+/* .sound3{
+	animation: background 3s 8;
+}
+
+@keyframes background {
+  10%, 90% {
+    background-color: #b3c6d8;
+  }
+
+  20%, 80% {
+    background-color: #7f8993;
+  }
+
+  30%, 50%, 70% {
+    background-color: #353b42;
+  }
+
+  40%, 60% {
+  background-color: #ffffff;
+  }
+} */
+
 
 
 /* **********************************************
@@ -333,16 +383,16 @@ You probably want to change the styling.
 
 .p13.on span:first-of-type {
 	opacity: 1;
-	transition: 0s;
+	transition: 0s ease-in;
 }
 .p13.on span:nth-of-type(2) {
 	opacity: 1;
-	transition: 0s .4s;
+	transition: 0s .6s ease-in;
 	margin-right: 0.25em;
 }
 .p13.on span:nth-of-type(3) {
 	opacity: 1;
-	transition: 0s .5s;
+	transition: 0s .9s ease-in;
 	margin-right: 0.25em;
 }
 
@@ -1125,12 +1175,14 @@ You probably want to change the styling.
 /* Dearth vader 39 POWER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
 .p40 span {
 	opacity: 0;
+	font-size: 2em;
 	/* font-family: "brenner Sans Light"; */
 }
 
 .p40.on span:first-of-type {
 	opacity: 1;
 	transition: 0s;
+	color: yellow;
 }
 
 
