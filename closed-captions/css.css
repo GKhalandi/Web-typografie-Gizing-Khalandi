@@ -79,7 +79,7 @@ SOUNDS
 /* Schudden van de video */
 
 .sound2, .sound13 iframe{
-	animation: shake 1s linear forwards 35;
+	animation: shake background  1s linear forwards 35;
 	transform: translate3d(0, 0, 0);
 }
 
@@ -127,10 +127,6 @@ SOUNDS
 
 
 
-/* .sound3{
-	animation: background 3s 8;
-}
-
 @keyframes background {
   10%, 90% {
     background-color: #b3c6d8;
@@ -147,7 +143,7 @@ SOUNDS
   40%, 60% {
   background-color: #ffffff;
   }
-} */
+}
 
 
 
