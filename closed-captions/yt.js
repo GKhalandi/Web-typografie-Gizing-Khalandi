@@ -8,7 +8,7 @@ function onYouTubeIframeAPIReady() {
 		playerVars: {
 			color: 'white',
 			start: '126',
-			end: '246'
+			end: '247'
 			//autoplay: '1'
 			//playlist: 'taJ60kskkns,FG0fTKAqZ5g'
 		},
@@ -57,7 +57,7 @@ function updateTimerDisplay(){
 		i++;
 	}
 
-	if ( t < 246) {
+	if ( t < 247) {
 		setTimeout(() =>{
 			updateTimerDisplay();
 		}, 100);
