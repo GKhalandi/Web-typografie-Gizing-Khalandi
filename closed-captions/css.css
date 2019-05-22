@@ -1,5 +1,7 @@
 body{
 	background: black;
+	height:50em;
+	width:100%;
 	z-index:0;
 }
 
@@ -145,27 +147,36 @@ SOUNDS
 
 
 /* Basgeluiden */
+/*.sound4{
+	animation: basgeluiden 20s ease 1;
+}
 
-/* .sound4 {
-	background: linear-gradient(180deg, #000000, #ff0000); */
-	/* background-size: 100%; */
-	/* animation: basgeluiden 20s ease 1;
-} */
-
-/* @keyframes basgeluiden {
+@keyframes basgeluiden {
     0% {
-			height:0;
-			bottom: 0;
-			opacity:0;
-		}
-    20% {
-			opacity:1;
+			background:black;
+			opacity: 0;
+
 		}
     100% {
-			height:100%;
-			bottom:-200px;
-		}
-} */
+			opacity: 0;
+      background: -webkit-linear-gradient(rgba(2,0,36,1) 0%, rgba(255,0,0,1) 100%);
+      background: -o-linear-gradient(rgba(2,0,36,1) 0%, rgba(255,0,0,1) 100%);
+      background: linear-gradient(rgba(2,0,36,1) 0%, rgba(255,0,0,1) 100%);
+}
+}*/
+
+.sound4 {
+	background: linear-gradient(to bottom, rgba(0,0,0,1) 33%, rgba(134,0,0, 1) 67%);
+	background-size:100% 300%;
+	background-position:center top;
+	animation: basgeluiden 30s;
+}
+
+@keyframes basgeluiden {
+	100% {
+		background-position:center bottom;
+	}
+}
 
 .sound5 iframe{
 	animation: vergroten 4s ease-out forwards;
@@ -199,26 +210,6 @@ SOUNDS
 
 }
 
-
-
-
-/* @keyframes background {
-  10%, 90% {
-    background-color: #b3c6d8;
-  }
-
-  20%, 80% {
-    background-color: #7f8993;
-  }
-
-  30%, 50%, 70% {
-    background-color: #353b42;
-  }
-
-  40%, 60% {
-  background-color: #ffffff;
-  }
-} */
 
 
 
@@ -858,24 +849,29 @@ You probably want to change the styling.
 }
 
 .p22.on, .p23.on, .p26.on, .p32.on, .p33.on, .p35.on, .p37.on{
-	animation: shakeitbaby 1s 1;
+	animation: shakeitbaby 1s 4;
 }
 
 @keyframes shakeitbaby{
 	0%{
-			opacity:1;
+			transform:translate(0px, 0px);
+			opacity(0.5);
 	}
 	20%{
-			opacity:0.6;
+			transform:translate(5px, 10px);
+			opacity(1);
 	}
 	40%{
-			opacity:0.8;
+			transform:translate(10px, 5px);
+			opacity(0.5);
 	}
 	80%{
-			opacity:0.6;
+			transform:translate(5px, 10px);
+			opacity(1);
 	}
 	100%{
-			opacity:0;
+			transform:translate(10px, 5px);
+			opacity(0.5);
 	}
 }
 
