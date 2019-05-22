@@ -2,6 +2,7 @@ body{
 	background: black;
 	z-index:0;
 }
+
 iframe{
 	width:95%;
 	height:30em;
@@ -86,8 +87,8 @@ SOUNDS
 
 /* Schudden van de video */
 
-/* Wind geluiden en lightsaber
-.sound0{
+/* Wind geluiden en lightsaber */
+/* .sound0{
 
 } */
 
@@ -120,7 +121,6 @@ SOUNDS
 /* Lightsaber slag */
 .sound2 {
 	background: linear-gradient(88deg, #000000, #cf1cdc, #000000);
-
 	background-size: 600% 600%;
 	animation: AnimationName 2s ease;
 }
@@ -144,12 +144,30 @@ SOUNDS
 }
 
 
-/* Basgeluiden
-.sound3{
+/* Basgeluiden */
 
+/* .sound4 {
+	background: linear-gradient(180deg, #000000, #ff0000); */
+	/* background-size: 100%; */
+	/* animation: basgeluiden 20s ease 1;
 } */
 
-.sound4 iframe{
+/* @keyframes basgeluiden {
+    0% {
+			height:0;
+			bottom: 0;
+			opacity:0;
+		}
+    20% {
+			opacity:1;
+		}
+    100% {
+			height:100%;
+			bottom:-200px;
+		}
+} */
+
+.sound5 iframe{
 	animation: vergroten 4s ease-out forwards;
 
 }
@@ -164,7 +182,7 @@ SOUNDS
 
 }
 
-.sound5 iframe{
+.sound6 iframe{
 	animation: normie 1s ease-out forwards;
 }
 
