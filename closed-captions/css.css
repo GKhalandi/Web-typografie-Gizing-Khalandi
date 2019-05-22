@@ -39,6 +39,7 @@ Feel free to adjust the defaults to your needs.
 	transition: .2s;
 	opacity: 0;
 }
+
 .Palpatine {
 	font-family: "brenner sans";
 	position: absolute;
@@ -68,7 +69,7 @@ Feel free to adjust the defaults to your needs.
 	font-family: "Brenner mono";
 	font-style: normal;
 	font-weight: 400;
-	top:7em;
+	top:8em;
 	left:1em;
 }
 
@@ -90,9 +91,21 @@ SOUNDS
 /* Schudden van de video */
 
 /* Wind geluiden en lightsaber */
-/* .sound0{
+.sound0 iframe{
+	animation: wind 5s 20;
+}
 
-} */
+@keyframes wind{
+	0%{
+		transform: skew(0deg,0deg);
+	}
+	50%{
+		transform: skew(0deg,-3deg);
+	}
+	100%{
+		transform: skew(0deg,0deg);
+	}
+}
 
 /* schudden. */
 .sound1 iframe{
@@ -188,7 +201,7 @@ SOUNDS
 		transform:scale(none);
 	}
 	100%{
-		transform:scale(2.5);
+		transform:scale(2.2);
 	}
 
 }
@@ -199,7 +212,7 @@ SOUNDS
 
 @keyframes normie{
 	0%{
-		transform:scale(2.5);
+		transform:scale(2.2);
 	}
 	75%{
 		transform:scale(0);
@@ -207,6 +220,11 @@ SOUNDS
 	100%{
 		transform:scale(none);
 	}
+
+}
+
+.sound7 iframe{
+	animation: vergroten 4s ease-out forwards;
 
 }
 
@@ -247,20 +265,30 @@ You probably want to change the styling.
 	transition: .1s 1.2s;
 	margin-right: 0.30em;
 }
-/* My Lord */
+/* My Lord bron: http://jsfiddle.net/chriscoyier/zvgCs/ */
 .p9.on span:nth-of-type(5) {
 	opacity: 1;
 	transition: .1s 1.7s;
 	margin-right: 0.3em;
 	font-size: 2em;
-	color:red;
+	text-shadow:   0 0 3px #FF0000,   /* Many shadows blur out the area around the text */
+															 3px 0 3px #FF0000,
+															 0 3px 3px #FF0000,
+															 -3px 0 3px #FF0000,
+															 0 -3px 3px #FF0000;
+
 }
+
 .p9.on span:nth-of-type(6) {
 	opacity: 1;
 	transition: .1s 2.3s;
 	margin-right: 0.3em;
 	font-size: 2em;
-	color:red;
+	text-shadow:   0 0 3px #FF0000,   /* Many shadows blur out the area around the text */
+                               3px 0 3px #FF0000,
+                               0 3px 3px #FF0000,
+                               -3px 0 3px #FF0000,
+                               0 -3px 3px #FF0000;
 }
 
 
@@ -293,14 +321,22 @@ You probably want to change the styling.
 .p10.on span:first-of-type {
 	opacity: 1;
 	transition: 0s;
-	color:lightblue;
 	margin-right: 0.3em;
+	text-shadow:   0 0 3px #49c4de,   /* Many shadows blur out the area around the text */
+															 3px 0 3px #49c4de,
+															 0 3px 3px #49c4de,
+															 -3px 0 3px #49c4de,
+															 0 -3px 3px #49c4de;
 }
 .p10.on span:nth-of-type(2) {
 	opacity: 1;
 	transition: 0s .2s;
 	margin-right: 0.3em;
-	color:red;
+	text-shadow:   0 0 3px #FF0000,   /* Many shadows blur out the area around the text */
+																 3px 0 3px #FF0000,
+																 0 3px 3px #FF0000,
+																 -3px 0 3px #FF0000,
+																 0 -3px 3px #FF0000;
 }
 .p10.on span:nth-of-type(3) {
 	opacity: 1;
@@ -311,7 +347,11 @@ You probably want to change the styling.
 	opacity: 1;
 	transition: 0s 0.8s;
 	margin-right: 0.3em;
-	color:lightblue;
+	text-shadow:   0 0 3px #49c4de,   /* Many shadows blur out the area around the text */
+																 3px 0 3px #49c4de,
+																 0 3px 3px #49c4de,
+																 -3px 0 3px #49c4de,
+																 0 -3px 3px #49c4de;
 }
 .p10.on span:nth-of-type(5) {
 	opacity: 1;
@@ -343,7 +383,11 @@ You probably want to change the styling.
 	transition: 0.1s 2.6s;
 	margin-right: 0.3em;
 	text-transform: uppercase;
-	color:darkred;
+	text-shadow:   0 0 3px #FF0000,   /* Many shadows blur out the area around the text */
+																 3px 0 3px #FF0000,
+																 0 3px 3px #FF0000,
+																 -3px 0 3px #FF0000,
+																 0 -3px 3px #FF0000;
 }
 .p10.on span:nth-of-type(11) {
 	opacity: 1;
@@ -375,7 +419,11 @@ You probably want to change the styling.
 	opacity: 1;
 	transition: 0s .3s;
 	margin-right: 0.3em;
-	color: lightblue;
+	text-shadow:   0 0 3px #49c4de,   /* Many shadows blur out the area around the text */
+																 3px 0 3px #49c4de,
+																 0 3px 3px #49c4de,
+																 -3px 0 3px #49c4de,
+																 0 -3px 3px #49c4de;
 }
 .p11.on span:nth-of-type(3) {
 	opacity: 1;
@@ -418,15 +466,15 @@ You probably want to change the styling.
 	opacity: 1;
 	transition: 0s .6s;
 	margin-right: 0.3em;
-	color:darkred;
+	font-style: bold;
 }
 .p12.on span:nth-of-type(5) {
 	opacity: 1;
 	transition: 0s .8s;
 	margin-right: 0.3em;
-	color:darkred;
-
-}.p12.on span:nth-of-type(6) {
+	font-style: bold;
+}
+.p12.on span:nth-of-type(6) {
 	opacity: 1;
 	transition: 0s 1s;
 	margin-right: 0.3em;
@@ -453,7 +501,11 @@ You probably want to change the styling.
 	opacity: 1;
 	transition: 0s ease-in;
 	margin-right: 0.3em;
-	color:red;
+	text-shadow:   0 0 3px #FF0000,   /* Many shadows blur out the area around the text */
+															 3px 0 3px #FF0000,
+															 0 3px 3px #FF0000,
+															 -3px 0 3px #FF0000,
+															 0 -3px 3px #FF0000;
 }
 .p13.on span:nth-of-type(2) {
 	opacity: 1;
@@ -494,8 +546,11 @@ You probably want to change the styling.
 	font-size: 3em;
 	transition: 0s 3s;
 	margin-right: 0.3em;
-	color:purple;
-
+	text-shadow:   0 0 3px #9121b4,   /* Many shadows blur out the area around the text */
+																 3px 0 3px #9121b4,
+																 0 3px 3px #9121b4,
+																 -3px 0 3px #9121b4,
+																 0 -3px 3px #9121b4;
 }
 .p14.on span:nth-of-type(5) {
 	opacity: 1;
@@ -520,8 +575,12 @@ You probably want to change the styling.
 .p15.on span:first-of-type {
 	opacity: 1;
 	transition: 0s;
-	color: purple;
 	margin-right: 0.3em;
+	text-shadow:   0 0 3px #9121b4,   /* Many shadows blur out the area around the text */
+															 3px 0 3px #9121b4,
+															 0 3px 3px #9121b4,
+															 -3px 0 3px #9121b4,
+															 0 -3px 3px #9121b4;
 }
 .p15.on span:nth-of-type(2) {
 	opacity: 1;
@@ -554,8 +613,14 @@ You probably want to change the styling.
 .p16.on span:first-of-type {
 	opacity: 1;
 	transition: 0s;
-	color: red;
 	margin-right: 0.3em;
+	text-shadow:   0 0 3px #FF0000,   /* Many shadows blur out the area around the text */
+															 3px 0 3px #FF0000,
+															 0 3px 3px #FF0000,
+															 -3px 0 3px #FF0000,
+															 0 -3px 3px #FF0000;
+
+
 }
 .p16.on span:nth-of-type(2) {
 	opacity: 1;
@@ -587,14 +652,20 @@ You probably want to change the styling.
 .p17 span {
 	opacity: 0;
 	color: white;
-	font-size: 2.4em;
+	font-size: 1.5em;
 }
 
 .p17.on span:first-of-type {
 	opacity: 1;
 	transition: 0s;
-	color:red;
 	margin-right: 0.3em;
+	text-shadow:   0 0 3px #FF0000,   /* Many shadows blur out the area around the text */
+															 3px 0 3px #FF0000,
+															 0 3px 3px #FF0000,
+															 -3px 0 3px #FF0000,
+															 0 -3px 3px #FF0000;
+
+
 }
 .p17.on span:nth-of-type(2) {
 	opacity: 1;
@@ -635,13 +706,16 @@ You probably want to change the styling.
 	opacity: 1;
 	transition: 0s 2.2s;
 	margin-right: 0.3em;
-	color:purple;
+	text-shadow:   0 0 3px #49c4de,   /* Many shadows blur out the area around the text */
+															 3px 0 3px #49c4de,
+															 0 3px 3px #49c4de,
+															 -3px 0 3px #49c4de,
+															 0 -3px 3px #49c4de;
 }
 .p17.on span:nth-of-type(10) {
 	opacity: 1;
 	transition: 0s 2.3s;
 	margin-right: 0.3em;
-	color:pink;
 }
 
 /* Palpetine zwak 18 You must choose. */
@@ -653,8 +727,12 @@ You probably want to change the styling.
 .p18.on span:first-of-type {
 	opacity: 1;
 	transition: 0s;
-	color:lightblue;
 	margin-right: 0.3em;
+	text-shadow:   0 0 3px #49c4de,   /* Many shadows blur out the area around the text */
+															 3px 0 3px #49c4de,
+															 0 3px 3px #49c4de,
+															 -3px 0 3px #49c4de,
+															 0 -3px 3px #49c4de;
 }
 .p18.on span:nth-of-type(2) {
 	opacity: 1;
@@ -693,7 +771,13 @@ You probably want to change the styling.
 	opacity: 1;
 	transition: 0s .7s;
 	margin-right: 0.3em;
-	color:red;
+	text-shadow:   0 0 3px #FF0000,   /* Many shadows blur out the area around the text */
+															 3px 0 3px #FF0000,
+															 0 3px 3px #FF0000,
+															 -3px 0 3px #FF0000,
+															 0 -3px 3px #FF0000;
+
+
 }
 .p19.on span:nth-of-type(5) {
 	opacity: 1;
@@ -702,7 +786,11 @@ You probably want to change the styling.
 	font-size: 1.7em;
 	text-transform: uppercase;
 	font-style: bold;
-	color:lightblue;
+	text-shadow:   0 0 3px #49c4de,   /* Many shadows blur out the area around the text */
+																 3px 0 3px #49c4de,
+																 0 3px 3px #49c4de,
+																 -3px 0 3px #49c4de,
+																 0 -3px 3px #49c4de;
 }
 
 .p19.on span:nth-of-type(6) {
@@ -718,7 +806,8 @@ You probably want to change the styling.
 .p20 span {
 	opacity: 0;
 	color: white;
-	font-size: 3.05em;
+	font-size: 2em;
+	top:0em;
 }
 
 .p20.on span:first-of-type {
@@ -736,7 +825,11 @@ You probably want to change the styling.
 	transition: 0s .5s;
 	margin-right: 0.3em;
 	text-transform: uppercase;
-	color:purple;
+	text-shadow:   0 0 3px #9121b4,   /* Many shadows blur out the area around the text */
+																 3px 0 3px #9121b4,
+																 0 3px 3px #9121b4,
+																 -3px 0 3px #9121b4,
+																 0 -3px 3px #9121b4;
 }
 .p20.on span:nth-of-type(4) {
 	opacity: 1;
@@ -753,21 +846,33 @@ You probably want to change the styling.
 	transition: 0s 1.4s;
 	margin-right: 0.3em;
 	text-transform: uppercase;
-	color:red;
+	text-shadow:   0 0 3px #FF0000,   /* Many shadows blur out the area around the text */
+															 3px 0 3px #FF0000,
+															 0 3px 3px #FF0000,
+															 -3px 0 3px #FF0000,
+															 0 -3px 3px #FF0000;
+
+
 }
 
 /* Palpatine_zwak 21 I can't hold it any longer.  */
 .p21 span {
 	opacity: 0;
 	color: white;
-	font-size: 3.05em;
+	font-size: 2em;
 }
 
 .p21.on span:first-of-type {
 	opacity: 1;
 	transition: 0s;
-	color:red;
 	margin-right: 0.3em;
+	text-shadow:   0 0 3px #FF0000,   /* Many shadows blur out the area around the text */
+															 3px 0 3px #FF0000,
+															 0 3px 3px #FF0000,
+															 -3px 0 3px #FF0000,
+															 0 -3px 3px #FF0000;
+
+
 }
 .p21.on span:nth-of-type(2) {
 	opacity: 1;
@@ -804,26 +909,50 @@ You probably want to change the styling.
 .p22.on span:first-of-type {
 	opacity: 1;
 	transition: 0s ease-in;
-	color:red;
 	margin-right: 0.3em;
+	text-shadow:   0 0 3px #FF0000,   /* Many shadows blur out the area around the text */
+															 3px 0 3px #FF0000,
+															 0 3px 3px #FF0000,
+															 -3px 0 3px #FF0000,
+															 0 -3px 3px #FF0000;
+
+
 }
 .p22.on span:nth-of-type(2) {
 	opacity: 1;
 	transition: 0s 0.3s ease-in;
-	color:red;
 	margin-right: 0.3em;
+	text-shadow:   0 0 3px #FF0000,   /* Many shadows blur out the area around the text */
+															 3px 0 3px #FF0000,
+															 0 3px 3px #FF0000,
+															 -3px 0 3px #FF0000,
+															 0 -3px 3px #FF0000;
+
+
 }
 .p22.on span:nth-of-type(3) {
 	opacity: 1;
 	transition: 0s 0.6s ease-in;
-	color:red;
 	margin-right: 0.3em;
+	text-shadow:   0 0 3px #FF0000,   /* Many shadows blur out the area around the text */
+															 3px 0 3px #FF0000,
+															 0 3px 3px #FF0000,
+															 -3px 0 3px #FF0000,
+															 0 -3px 3px #FF0000;
+
+
 }
 .p22.on span:nth-of-type(4) {
 	opacity: 1;
 	transition: 0s 0.9s ease-in;
-	color:red;
 	margin-right: 0.3em;
+	text-shadow:   0 0 3px #FF0000,   /* Many shadows blur out the area around the text */
+															 3px 0 3px #FF0000,
+															 0 3px 3px #FF0000,
+															 -3px 0 3px #FF0000,
+															 0 -3px 3px #FF0000;
+
+
 }
 .p22.on span:nth-of-type(5) {
 	opacity: 1;
@@ -833,14 +962,26 @@ You probably want to change the styling.
 .p22.on span:nth-of-type(6) {
 	opacity: 1;
 	transition: 0s 1.6s ease-in;
-	color:red;
 	margin-right: 0.3em;
+	text-shadow:   0 0 3px #FF0000,   /* Many shadows blur out the area around the text */
+															 3px 0 3px #FF0000,
+															 0 3px 3px #FF0000,
+															 -3px 0 3px #FF0000,
+															 0 -3px 3px #FF0000;
+
+
 }
 .p22.on span:nth-of-type(7) {
 	opacity: 1;
 	transition: 0s 1.9s ease-in;
-	color:red;
 	margin-right: 0.3em;
+	text-shadow:   0 0 3px #FF0000,   /* Many shadows blur out the area around the text */
+															 3px 0 3px #FF0000,
+															 0 3px 3px #FF0000,
+															 -3px 0 3px #FF0000,
+															 0 -3px 3px #FF0000;
+
+
 }
 .p22.on span:nth-of-type(8) {
 	opacity: 1;
@@ -848,30 +989,38 @@ You probably want to change the styling.
 	margin-right: 0.3em;
 }
 
-.p22.on, .p23.on, .p26.on, .p32.on, .p33.on, .p35.on, .p37.on{
-	animation: shakeitbaby 1s 4;
+.p20.on, .p21.on, .p22.on, .p23.on, .p24.on, .p25.on,  .p26.on, .p32.on, .p33.on, .p35.on, .p37.on .p39.on{
+	animation: shakeitbaby 0.7s 4;
 }
 
 @keyframes shakeitbaby{
 	0%{
-			transform:translate(0px, 0px);
-			opacity(0.5);
+			transform:translateX(0px);
+			opacity:0.5;
+			font-weight: 600;
 	}
 	20%{
-			transform:translate(5px, 10px);
-			opacity(1);
+			transform:translateX(5px);
+			opacity:0.8;
+			font-family: "Brenner Sans Condened";
+			font-weight: 400;
 	}
 	40%{
-			transform:translate(10px, 5px);
-			opacity(0.5);
+			transform:translateX(10px);
+			opacity:0.5;
+			font-weight: 100;
 	}
 	80%{
-			transform:translate(5px, 10px);
-			opacity(1);
+			transform:translateX(5px);
+			opacity:0.8;
+			font-family: "Brenner Sans Condened";
+			font-weight: 600;
 	}
 	100%{
-			transform:translate(10px, 5px);
-			opacity(0.5);
+			transform:translateX(10px);
+			opacity:0.1;
+			font-style: italic;
+			font-weight: 200;
 	}
 }
 
@@ -886,13 +1035,21 @@ You probably want to change the styling.
 	opacity: 1;
 	transition: 0s ease-in;
 	margin-right: 0.3em;
-	color:red;
+	text-shadow:   0 0 3px #FF0000,   /* Many shadows blur out the area around the text */
+															 3px 0 3px #FF0000,
+															 0 3px 3px #FF0000,
+															 -3px 0 3px #FF0000,
+															 0 -3px 3px #FF0000;
 }
 .p23.on span:nth-of-type(2) {
 	opacity:1;
 	transition: 0s .4s ease-in;
 	margin-right: 0.3em;
-	color:red;
+	text-shadow:   0 0 3px #FF0000,   /* Many shadows blur out the area around the text */
+															 3px 0 3px #FF0000,
+															 0 3px 3px #FF0000,
+															 -3px 0 3px #FF0000,
+															 0 -3px 3px #FF0000;
 }
 .p23.on span:nth-of-type(3) {
 	opacity: 0.8;
@@ -909,6 +1066,7 @@ You probably want to change the styling.
 /* Palpatine_zwak 23 Anakin! */
 .p24 span {
 	opacity: 0;
+	top:4em;
 	text-transform: uppercase;
 
 }
@@ -916,8 +1074,12 @@ You probably want to change the styling.
 .p24.on span:first-of-type {
 	opacity: 1;
 	transition: 0s;
-	color:lightblue;
-	font-size: 3.3em;
+	font-size: 2.3em;
+	text-shadow:   0 0 3px #49c4de,   /* Many shadows blur out the area around the text */
+															 3px 0 3px #49c4de,
+															 0 3px 3px #49c4de,
+															 -3px 0 3px #49c4de,
+															 0 -3px 3px #49c4de;
 }
 
 
@@ -935,7 +1097,13 @@ You probably want to change the styling.
 	opacity: 1;
 	transition: 0s .4s;
 	margin-right: 0.3em;
-	color:red;
+	text-shadow:   0 0 3px #FF0000,   /* Many shadows blur out the area around the text */
+															 3px 0 3px #FF0000,
+															 0 3px 3px #FF0000,
+															 -3px 0 3px #FF0000,
+															 0 -3px 3px #FF0000;
+
+
 }
 .p25.on span:nth-of-type(3) {
 	opacity: 1;
@@ -946,7 +1114,11 @@ You probably want to change the styling.
 	opacity: 1;
 	transition: 0s .7s ease-in;
 	margin-right: 0.3em;
-	color:red;
+	text-shadow:   0 0 3px #FF0000,   /* Many shadows blur out the area around the text */
+															 3px 0 3px #FF0000,
+															 0 3px 3px #FF0000,
+															 -3px 0 3px #FF0000,
+															 0 -3px 3px #FF0000;
 }
 
 
@@ -960,25 +1132,41 @@ You probably want to change the styling.
 	opacity: 1;
 	transition: 0s ease-in;
 	margin-right: 0.3em;
-	color:red;
+	text-shadow:   0 0 3px #FF0000,   /* Many shadows blur out the area around the text */
+															 3px 0 3px #FF0000,
+															 0 3px 3px #FF0000,
+															 -3px 0 3px #FF0000,
+															 0 -3px 3px #FF0000;
 }
 .p26.on span:nth-of-type(2) {
 	opacity: 1;
 	transition: 0s .4s ease-in;
 	margin-right: 0.3em;
-	color:red;
+	text-shadow:   0 0 3px #FF0000,   /* Many shadows blur out the area around the text */
+															 3px 0 3px #FF0000,
+															 0 3px 3px #FF0000,
+															 -3px 0 3px #FF0000,
+															 0 -3px 3px #FF0000;
 }
 .p26.on span:nth-of-type(3) {
 	opacity: 1;
 	transition: 0s .6s ease-in;
 	margin-right: 0.3em;
-	color:red;
+	text-shadow:   0 0 3px #FF0000,   /* Many shadows blur out the area around the text */
+															 3px 0 3px #FF0000,
+															 0 3px 3px #FF0000,
+															 -3px 0 3px #FF0000,
+															 0 -3px 3px #FF0000;
 }
 .p26.on span:nth-of-type(4) {
 	opacity: 0.9;
 	transition: 0s .8s ease-in;
 	margin-right: 0.3em;
-	color:red;
+	text-shadow:   0 0 3px #FF0000,   /* Many shadows blur out the area around the text */
+															 3px 0 3px #FF0000,
+															 0 3px 3px #FF0000,
+															 -3px 0 3px #FF0000,
+															 0 -3px 3px #FF0000;
 }
 .p26.on span:nth-of-type(5) {
 	opacity: 1;
@@ -1019,7 +1207,11 @@ You probably want to change the styling.
 	transition: 0s;
 	text-transform: uppercase;
 	margin-right: 0.3em;
-	color:purple
+	text-shadow:   0 0 3px #9121b4,   /* Many shadows blur out the area around the text */
+																 3px 0 3px #9121b4,
+																 0 3px 3px #9121b4,
+																 -3px 0 3px #9121b4,
+																 0 -3px 3px #9121b4;
 }
 .p27.on span:nth-of-type(2) {
 	opacity: 1;
@@ -1071,7 +1263,7 @@ You probably want to change the styling.
 /* Anakin 27 You can't. */
 .p28 span {
 	opacity: 0;
-	font-size: 2.3em;
+	font-size: 1.3em;
 	text-transform: uppercase;
 	top:10em;
 }
@@ -1080,7 +1272,11 @@ You probably want to change the styling.
 	opacity: 1;
 	transition: 0s;
 	margin-right: 0.3em;
-	color:purple;
+	text-shadow:   0 0 3px #9121b4,   /* Many shadows blur out the area around the text */
+																 3px 0 3px #9121b4,
+																 0 3px 3px #9121b4,
+																 -3px 0 3px #9121b4,
+																 0 -3px 3px #9121b4;
 }
 .p28.on span:nth-of-type(2) {
 	opacity: 1;
@@ -1091,16 +1287,19 @@ You probably want to change the styling.
 /* Anakin 28 He must stand trial. */
 .p29 span {
 	opacity: 0;
-	font-size: 2.3em;
+	font-size: 1.3em;
 	font-style: bold;
-	top:10em;
 }
 
 .p29.on span:first-of-type {
 	opacity: 1;
 	transition: 0s;
 	margin-right: 0.3em;
-	color:red;
+	text-shadow:   0 0 3px #FF0000,   /* Many shadows blur out the area around the text */
+															 3px 0 3px #FF0000,
+															 0 3px 3px #FF0000,
+															 -3px 0 3px #FF0000,
+															 0 -3px 3px #FF0000;
 }
 .p29.on span:nth-of-type(2) {
 	opacity: 1;
@@ -1128,7 +1327,11 @@ You probably want to change the styling.
 	opacity: 1;
 	transition: 0s;
 		margin-right: 0.3em;
-	color:red;
+		text-shadow:   0 0 3px #FF0000,   /* Many shadows blur out the area around the text */
+																 3px 0 3px #FF0000,
+																 0 3px 3px #FF0000,
+																 -3px 0 3px #FF0000,
+																 0 -3px 3px #FF0000;
 }
 .p30.on span:nth-of-type(2) {
 	opacity: 1;
@@ -1180,8 +1383,12 @@ You probably want to change the styling.
 .p31.on span:first-of-type {
 	opacity: 1;
 	transition: 0s;
-	color:purple;
 	margin-right: 0.3em;
+	text-shadow:   0 0 3px #9121b4,   /* Many shadows blur out the area around the text */
+															 3px 0 3px #9121b4,
+															 0 3px 3px #9121b4,
+															 -3px 0 3px #9121b4,
+															 0 -3px 3px #9121b4;
 }
 .p31.on span:nth-of-type(2) {
 	opacity: 1;
@@ -1225,8 +1432,12 @@ You probably want to change the styling.
 .p32.on span:first-of-type {
 	opacity: 1;
 	transition: 0s;
-	color:red;
 	margin-right: 0.3em;
+	text-shadow:   0 0 3px #FF0000,   /* Many shadows blur out the area around the text */
+															 3px 0 3px #FF0000,
+															 0 3px 3px #FF0000,
+															 -3px 0 3px #FF0000,
+															 0 -3px 3px #FF0000;
 }
 .p32.on span:nth-of-type(2) {
 	opacity: 1;
@@ -1265,7 +1476,11 @@ You probably want to change the styling.
 	opacity: 1;
 	transition: 0s .7s;
 	margin-right: 0.3em;
-	color:red;
+	text-shadow:   0 0 3px #FF0000,   /* Many shadows blur out the area around the text */
+																 3px 0 3px #FF0000,
+																 0 3px 3px #FF0000,
+																 -3px 0 3px #FF0000,
+																 0 -3px 3px #FF0000;
 }
 
 
@@ -1281,8 +1496,12 @@ You probably want to change the styling.
 .p34.on span:first-of-type {
 	opacity: 1;
 	transition: 0s;
-	color:red;
 	margin-right: 0.3em;
+	text-shadow:   0 0 3px #FF0000,   /* Many shadows blur out the area around the text */
+															 3px 0 3px #FF0000,
+															 0 3px 3px #FF0000,
+															 -3px 0 3px #FF0000,
+															 0 -3px 3px #FF0000;
 }
 .p34.on span:nth-of-type(2) {
 	opacity: 1;
@@ -1339,7 +1558,11 @@ You probably want to change the styling.
 	opacity: 1;
 	transition: 0s .5s;
 	margin-right: 0.3em;
-	color:red;
+	text-shadow:   0 0 3px #FF0000,   /* Many shadows blur out the area around the text */
+															 3px 0 3px #FF0000,
+															 0 3px 3px #FF0000,
+															 -3px 0 3px #FF0000,
+															 0 -3px 3px #FF0000;
 }
 
 
@@ -1366,6 +1589,7 @@ You probably want to change the styling.
 .p38 span {
 	opacity: 0;
 	text-transform: uppercase;
+	left:2em;
 }
 
 .p38.on span:first-of-type {
@@ -1379,6 +1603,10 @@ You probably want to change the styling.
 	opacity: 0;
 	font-size: 3em;
 	text-transform: uppercase;
+	flex-direction: column;
+	justify-content: space-between;
+	top:0em;
+	left:3em;
 }
 
 .p39.on span:first-of-type {
@@ -1394,35 +1622,44 @@ You probably want to change the styling.
 	top:0em;
 	left:0;
 	text-transform: uppercase;
-	color: yellow;
 	flex-direction: column;
 	justify-content: space-between;
+	text-shadow:   0 0 3px #66a2ff,   /* Many shadows blur out the area around the text */
+															 3px 0 3px #66a2ff,
+															 0 3px 3px #66a2ff,
+															 -3px 0 3px #66a2ff,
+															 0 -3px 3px #66a2ff;
 }
 
 .p40.on span:first-of-type {
 	opacity: 1;
 	transition: 0s;
-	color: yellow;
+
 }
 .p40.on span:nth-of-type(2) {
 	opacity: 1;
 	transition: 0s 0.1s;
+
 }
 .p40.on span:nth-of-type(3){
 	opacity: 1;
 	transition: 0s 0.2s;
+
 }
 .p40.on span:nth-of-type(4){
 	opacity: 1;
 	transition: 0s 0.3s;
+
 }
 .p40.on span:nth-of-type(5){
 	opacity: 1;
 	transition: 0s 0.4s;
+
 }
 .p40.on span:nth-of-type(6){
 	opacity: 1;
 	transition: 0s 0.5s;
+
 }
 
 
@@ -1433,14 +1670,19 @@ You probably want to change the styling.
 	top:0em;
 	left:0;
 	text-transform: uppercase;
-	color: yellow;
 	flex-direction: column;
 	justify-content: flex-end;
+	text-shadow:   0 0 3px #66a2ff,   /* Many shadows blur out the area around the text */
+															 3px 0 3px #66a2ff,
+															 0 3px 3px #66a2ff,
+															 -3px 0 3px #66a2ff,
+															 0 -3px 3px #66a2ff;
 }
 
 .p41.on span:first-of-type {
 	opacity: 1;
 	transition: 0s;
+
 }
 .p1.on span:nth-of-type(2) {
 	opacity: 1;
@@ -1471,9 +1713,13 @@ You probably want to change the styling.
 	top:0em;
 	left:0;
 	text-transform: uppercase;
-	color: yellow;
 	flex-direction: column;
 	justify-content: flex-end;
+	text-shadow:   0 0 3px #66a2ff,   /* Many shadows blur out the area around the text */
+															 3px 0 3px #66a2ff,
+															 0 3px 3px #66a2ff,
+															 -3px 0 3px #66a2ff,
+															 0 -3px 3px #66a2ff;
 }
 
 .p42.on span:first-of-type {
