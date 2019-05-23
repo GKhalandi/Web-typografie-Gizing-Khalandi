@@ -1007,7 +1007,7 @@ You probably want to change the styling.
 	20%{
 			transform:translateX(5px);
 			opacity:0.8;
-			font-family: "Brenner Sans Condened";
+			font-family: "Brenner Sans Condensed";
 			font-weight: 400;
 	}
 	40%{
@@ -1018,7 +1018,7 @@ You probably want to change the styling.
 	80%{
 			transform:translateX(5px);
 			opacity:0.8;
-			font-family: "Brenner Sans Condened";
+			font-family: "Brenner Sans Condensed";
 			font-weight: 600;
 	}
 	100%{
